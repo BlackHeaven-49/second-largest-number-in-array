@@ -1,0 +1,33 @@
+#include <stdio.h>
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+void push(int value) {
+if (top == MAX-1) {
+printf("full stack");
+} else {
+top++;
+stack[top]=value;
+printf("pushed:%d\n",value);
+}
+}
+void pop() {
+if (top == -1) {
+printf("empty stack\n");
+} else {
+printf("popped: %d\n",stack[top]);
+top--;
+}
+}
+
+int main() {
+push(10);
+push(20);
+push(49);
+
+pop();
+pop();
+pop();
+return 0;
+}
